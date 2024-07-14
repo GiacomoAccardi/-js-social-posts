@@ -99,7 +99,7 @@ h1 {
 
 .post__image img {
     width: 100%;
-    height: 350px;
+    
     object-fit:fill;
 }
 
