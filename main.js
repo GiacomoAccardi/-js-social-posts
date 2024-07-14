@@ -55,3 +55,7 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+//recoupero dal dom il div nella quale stampare i post 
+
+const postField = document.querySelector('post');
