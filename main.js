@@ -97,3 +97,9 @@ posts.forEach((elem) => {
 
 document.querySelector('.post').innerHTML = postX;
 
+//recuper dal dom il tasto like
+
+const likeButton = document.querySelector('.like-button')
+
+
+
