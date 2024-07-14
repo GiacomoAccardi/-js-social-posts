@@ -57,5 +57,8 @@ const posts = [
 ];
 
 //recoupero dal dom il div nella quale stampare i post 
-
 const postField = document.querySelector('post');
+
+//definisco una variabile per il post 
+let postX = '';
+
