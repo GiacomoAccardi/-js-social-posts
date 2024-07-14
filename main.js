@@ -62,3 +62,11 @@ const postField = document.querySelector('post');
 //definisco una variabile per il post 
 let postX = '';
 
+//tramite forEach inserisco i post nella pagina
+
+posts.forEach(elem) => {
+    postX += ``
+
+}
+
+
