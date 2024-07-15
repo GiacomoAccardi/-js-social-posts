@@ -101,6 +101,8 @@ document.querySelector('.post').innerHTML = postX;
 const likeButtons = document.querySelectorAll('.js-like-button');
 //recuperò il counter dei like
 const likesCounter = document.querySelectorAll('.js-likes-counter');
+//array vuoto per salvare i post clickati
+const clicked = [];
 
 //con un for differenzio i pulsanti
 for (let i = 0; i < likeButtons.length; i++){
@@ -119,7 +121,12 @@ for (let i = 0; i < likeButtons.length; i++){
 
         likes.innerText = likesValue + 1;
 
-        
+        //inserisco in un array vuoto l'id del post a cui abbiamo messo like
+        //parto dall'isolare il singolo oggetto post dell'array "posts"
+        let currentPost = posts[i];
+        //pusho l'id del singolo post cliccato
+        clicked.push(currentPost.id);
+        console.log(clicked);
     });
 }
 
