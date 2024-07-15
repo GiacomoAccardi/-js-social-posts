@@ -66,7 +66,7 @@ posts.forEach((elem) => {
                 <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src= ${elem.media} alt=${elem.name}>                    
+                        <img class="profile-pic" src= ${elem.author.image} alt=${elem.name}>                    
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${elem.author.name}</div>
@@ -76,7 +76,7 @@ posts.forEach((elem) => {
             </div>
             <div class="post__text">${elem.content}</div>
             <div class="post__image">
-                <img src=${elem.author.image} alt="">
+                <img src=${elem.media} alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
@@ -100,6 +100,12 @@ document.querySelector('.post').innerHTML = postX;
 //recuper dal dom il tasto like
 
 const likeButton = document.querySelector('.like-button')
+
+likeButton.addEventListener('click', function (){
+    
+
+
+});
 
 
 
