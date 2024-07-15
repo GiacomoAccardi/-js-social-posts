@@ -81,7 +81,7 @@ posts.forEach((elem) => {
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                        <a class="like-button  js-like-button" href="#" data-postid=${elem.id}>
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
@@ -98,14 +98,20 @@ posts.forEach((elem) => {
 document.querySelector('.post').innerHTML = postX;
 
 //recuper dal dom il tasto like
+const likeButtons = document.querySelectorAll('.js-like-button');
+//recuperò il counter dei like
+const likesCounter = document.querySelectorAll('.js-likes-counter');
 
-const likeButton = document.querySelector('.like-button')
+//con un for differenzio i pulsanti
+for (let i = 0; i < likeButtons.length; i++){
+    let currentButton = likeButtons[i];
 
-likeButton.addEventListener('click', function (){
-    
-
-
-});
-
+    currentButton.addEventListener('click', function(event){
+        //console.log(this);
+        event.preventDefault();
+        //cambio colore una volta avvenuto il click
+        this.classList.add('like-button--liked');
+    });
+}
 
 
