@@ -111,6 +111,15 @@ for (let i = 0; i < likeButtons.length; i++){
         event.preventDefault();
         //cambio colore una volta avvenuto il click
         this.classList.add('like-button--liked');
+
+        //incremento il numero di like quando clicco.
+        let likes = likesCounter[i];
+        let likesValue = parseInt(likes.innerText);
+        //console.log(likesValue)
+
+        likes.innerText = likesValue + 1;
+
+        
     });
 }
 
